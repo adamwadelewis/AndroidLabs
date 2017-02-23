@@ -14,13 +14,16 @@ import android.view.ViewGroup;
  */
 
 public class StudentListFragment extends Fragment {
-    @Nullable
-    @Override
+
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
-        RecyclerView listView = (RecyclerView) inflater.inflate(R.id.studentList,container, false);
-        StudentAdapter adapter = new StudentAdapter(Cohort.getCohort().buildAList(),this.getContext());
+        RecyclerView listView;
+        RecyclerView.LayoutManager layoutManager;
+        View rootView = (View) inflater.inflate(R.layout.studentlist,container, false);
+        listView = (RecyclerView) rootView.findViewById(R.id.aStudentList);
+        layoutManager = new LinearLayoutManager(getActivity());
+        StudentAdapter adapter = new StudentAdapter(Cohort.getCohort().buildAList(),getContext());
         listView.setAdapter(adapter);
-        listView.setLayoutManager(new LinearLayoutManager(this.getContext()));
-        return listView;
+        listView.setLayoutManager(layoutManager);
+        return rootView;
     }
 }
