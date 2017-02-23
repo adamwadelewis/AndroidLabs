@@ -13,7 +13,7 @@ public class GradeActivity extends AppCompatActivity {
         FragmentManager fm = getFragmentManager();
         Fragment fragment_grade = fm.findFragmentById(R.id.fragment_container_grade);
         if (fragment_grade == null) {
-            fragment_grade = new StudentMasterFragment();
+            fragment_grade = new StudentListFragment();
             fm.beginTransaction()
                     .add(R.id.fragment_container_grade,fragment_grade)
                     .commit();

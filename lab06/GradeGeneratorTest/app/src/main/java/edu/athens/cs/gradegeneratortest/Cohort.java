@@ -4,6 +4,7 @@ package edu.athens.cs.gradegeneratortest;
  * Created by alewis on 2/17/17.
  */
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Set;
 import java.util.TreeSet;
@@ -11,6 +12,8 @@ import java.util.TreeSet;
 public class Cohort {
     public static Cohort sCohort;
     private HashMap<String, Integer> studentMap = new HashMap<String, Integer>();
+    private String currentStudent;
+
     private Cohort() {
         // TODO: Put test data into the list for now
         studentMap.put("Lewis",40);
@@ -26,11 +29,21 @@ public class Cohort {
         return sCohort;
     }
 
+    public String getCurrentStudent() {
+        return currentStudent;
+    }
+
+    public void setCurrentStudent(String currentStudent) {
+        this.currentStudent = currentStudent;
+    }
+
     public Integer getStudentGrade(String name) {
+        currentStudent = name;
         return studentMap.get(name);
     }
 
     public void addStudent(String name, Integer grade) {
+        currentStudent = name;
         studentMap.put(name,grade);
     }
 
@@ -45,6 +58,13 @@ public class Cohort {
     public String getAStudent() {
         Set<String> keys = studentMap.keySet();
         TreeSet<String> keysInTree = new TreeSet<String>(keys);
-        return (String) keysInTree.first();
+        currentStudent = (String)keysInTree.first();
+        return currentStudent;
     }
+
+    public ArrayList<String> buildAList()
+    {
+        return new ArrayList<String>(studentMap.keySet());
+    }
+
 }
