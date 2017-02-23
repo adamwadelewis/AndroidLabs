@@ -11,11 +11,18 @@ public class GradeActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
         FragmentManager fm = getFragmentManager();
-        Fragment fragment = fm.findFragmentById(R.id.fragment_container);
-        if (fragment == null) {
-            fragment = new StudentMasterFragment();
+        Fragment fragment_grade = fm.findFragmentById(R.id.fragment_container_grade);
+        if (fragment_grade == null) {
+            fragment_grade = new StudentMasterFragment();
             fm.beginTransaction()
-                    .add(R.id.fragment_container,fragment)
+                    .add(R.id.fragment_container_grade,fragment_grade)
+                    .commit();
+        }
+        Fragment fragment_nav = fm.findFragmentById(R.id.fragment_container_nav);
+        if (fragment_nav == null) {
+            fragment_nav = new NavigationFragment();
+            fm.beginTransaction()
+                    .add(R.id.fragment_container_nav,fragment_nav)
                     .commit();
         }
     }

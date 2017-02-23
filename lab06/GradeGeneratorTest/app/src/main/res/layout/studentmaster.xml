@@ -20,22 +20,6 @@
         android:inputType="number"
         android:maxLines="1"/>
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/student_grade">
 
-        <Button
-            android:id="@+id/prev_student"
-            android:layout_gravity="left"
-            android:text="@string/strPrev" />
-
-        <Button
-            android:id="@+id/next_student"
-            android:layout_gravity="right"
-            android:text="@string/strNext" />
-
-    </GridLayout>
 
 </RelativeLayout>
