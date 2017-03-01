@@ -42,7 +42,7 @@ public class StudentMasterFragment extends Fragment {
                     switch (keyCode) {
                         case KeyEvent.KEYCODE_DPAD_CENTER:
                         case KeyEvent.KEYCODE_ENTER:
-                            updateText((TextView) v);
+                            updateText((TextView) v);9
                             return true;
                         default:
                             break;
