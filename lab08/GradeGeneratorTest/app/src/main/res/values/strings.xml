@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Grade Generator Test</string>
+    <string name="strExistsWarning">Updated!</string>
+    <string name="strNotExistsAdded">Added!</string>
+    <string name="strPrev">Previous</string>
+    <string name="strNext"> Next </string>
+    <string name="done">Done</string>
+    <string name="cancel">Cancel</string>
+</resources>
