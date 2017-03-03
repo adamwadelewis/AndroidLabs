@@ -1,16 +1,22 @@
 package edu.athens.cs.gradegeneratortest;
 
-import android.app.Fragment;
-import android.app.FragmentManager;
+import android.support.v4.app.Fragment;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.app.FragmentPagerAdapter;
+import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+
+import java.util.List;
 
 public class GradeActivity extends AppCompatActivity {
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_grade);
-        FragmentManager fm = getFragmentManager();
+        FragmentManager fm = getSupportFragmentManager();
         Fragment fragment_grade = fm.findFragmentById(R.id.fragment_container_grade);
         if (fragment_grade == null) {
             fragment_grade = new StudentListFragment();
@@ -25,5 +31,6 @@ public class GradeActivity extends AppCompatActivity {
                     .add(R.id.fragment_container_nav,fragment_nav)
                     .commit();
         }
+
     }
 }

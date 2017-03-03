@@ -1,7 +1,11 @@
 package edu.athens.cs.gradegeneratortest;
 
+import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
+import android.support.v4.app.FragmentManager;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -23,6 +27,20 @@ public class StudentAdapter extends RecyclerView.Adapter<StudentAdapter.ViewHold
             super(itemView);
             nameTextView = (TextView) itemView.findViewById(R.id.listrowname);
             editButton = (Button) itemView.findViewById(R.id.editstudent);
+            editButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    try {
+                        Activity a = (Activity) studentAdapterContext;
+                        Intent i = new Intent(studentAdapterContext, StudentEditActivity.class);
+                        i.putExtra("studentName",nameTextView.getText().toString());
+                        a.startActivity(i);
+                    }
+                    catch (ClassCastException e) {
+                        Log.d("GradeGenerateTest","Opps. Activity cast fail in StudentAdapter");
+                    }
+                }
+            });
         }
     }
     private List<String> listOfStudentNames;

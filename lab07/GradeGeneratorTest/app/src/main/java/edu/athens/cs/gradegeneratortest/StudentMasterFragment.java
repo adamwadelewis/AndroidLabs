@@ -4,7 +4,7 @@ package edu.athens.cs.gradegeneratortest;
  * Created by alewis on 2/3/17.
  */
 
-import android.app.Fragment;
+import android.support.v4.app.Fragment;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.KeyEvent;
@@ -18,11 +18,20 @@ import android.widget.Toast;
 
 public class StudentMasterFragment extends Fragment {
     Cohort myCohort = Cohort.getCohort();
+    private String currentStudent;
     private TextView studentEntryField;
     private EditText studentGradeField;
+    public static StudentMasterFragment newInstance(String name) {
+        StudentMasterFragment newStudentMF = new StudentMasterFragment();
+        Bundle args = new Bundle();
+        args.putString("studentName", name);
+        newStudentMF.setArguments(args);
+        return newStudentMF;
+    }
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        currentStudent = getArguments().getString ("studentName");
     }
 
     @Nullable
@@ -42,7 +51,7 @@ public class StudentMasterFragment extends Fragment {
                     switch (keyCode) {
                         case KeyEvent.KEYCODE_DPAD_CENTER:
                         case KeyEvent.KEYCODE_ENTER:
-                            updateText((TextView) v);9
+                            updateText((TextView) v);
                             return true;
                         default:
                             break;
@@ -60,9 +69,8 @@ public class StudentMasterFragment extends Fragment {
                 return false;
             }
         });
-        String firstStudent = myCohort.getAStudent();
-        studentEntryField.setText(firstStudent);
-        studentGradeField.setText(myCohort.getStudentGrade(firstStudent).toString());
+        studentEntryField.setText(currentStudent);
+        studentGradeField.setText(myCohort.getStudentGrade(currentStudent).toString());
         return v;
     }
 

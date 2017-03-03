@@ -7,7 +7,7 @@
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="670da4c0205418ff422b4cc2d84a06deb87d098c">
+        sha1="bd7bcd1b997b8b63525cccd5c5a39a1670566785">
         <dex dex="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run_90f0777e73682b89b7955bdca0741f5b254035b4/classes.dex" />
     </item>
     <item
@@ -30,15 +30,6 @@
     </item>
     <item
         is-multidex="true"
-        jar="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
-        jumboMode="true"
-        optimize="true"
-        revision="25.0.0"
-        sha1="aee64634871d88a419d59eb743c1258a60f19700">
-        <dex dex="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_23e8110f1144bf155359ef50b023c08b612dbc55/classes.dex" />
-    </item>
-    <item
-        is-multidex="true"
         jar="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/25.1.0/jars/classes.jar"
         jumboMode="true"
         optimize="true"
@@ -48,11 +39,20 @@
     </item>
     <item
         is-multidex="true"
+        jar="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/exploded-aar/com.android.support/support-core-ui/25.1.0/jars/classes.jar"
+        jumboMode="true"
+        optimize="true"
+        revision="25.0.0"
+        sha1="aee64634871d88a419d59eb743c1258a60f19700">
+        <dex dex="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/com.android.support-support-core-ui-25.1.0_23e8110f1144bf155359ef50b023c08b612dbc55/classes.dex" />
+    </item>
+    <item
+        is-multidex="true"
         jar="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/incremental-classes/debug/instant-run-bootstrap.jar"
         jumboMode="true"
         optimize="true"
         revision="25.0.0"
-        sha1="f0bc7a73a335c32d24af818eed1131072ff2ecb0">
+        sha1="a9211e540e7b775dd15439dc3f3bbee0199c54b2">
         <dex dex="/home/alewis/Projects/AndroidLabs/lab08/GradeGeneratorTest/app/build/intermediates/transforms/dex/debug/folders/1000/10/instant-run-bootstrap_971a1c0b9e1e043ed0376c9cb902084d338d4864/classes.dex" />
     </item>
     <item
